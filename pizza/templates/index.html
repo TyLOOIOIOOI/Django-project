@@ -1,0 +1,15 @@
+<ul>
+    {% for pizza in pizzas %}
+    <li>
+        <a href="pizza/{{ pizza.id }}">{{ pizza.pizza_name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for topping in toppings %}
+    <li>
+        {{ topping.topping_name }}, {{topping.pizza.pizza_name}}
+    </li>
+    {% endfor %}
+</ul>
